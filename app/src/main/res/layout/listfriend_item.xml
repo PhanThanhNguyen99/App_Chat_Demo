@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/listFriend_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <de.hdodenhof.circleimageview.CircleImageView
+       android:id="@+id/avatar_Friend"
+       android:layout_width="50dp"
+       android:layout_height="50dp"/>
+    <TextView
+        android:id="@+id/name_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/avatar_Friend"
+        android:text="Name"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/avatar_Friend"
+        android:layout_marginStart="10dp" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/status_on"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/name_friend"
+        android:layout_toRightOf="@id/avatar_Friend"
+        android:layout_marginLeft="-15dp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/ic_launcher"
+        app:civ_border_color="#05df26"
+        android:layout_toEndOf="@id/avatar_Friend"
+        android:layout_marginStart="-15dp" />
+    <TextView
+        android:id="@+id/status_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 phút"
+        android:visibility="gone"
+        android:layout_toRightOf="@id/avatar_Friend"
+        android:layout_below="@id/name_friend"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="5sp"
+        android:background="@drawable/status_friend"
+        android:padding="1dp"
+        android:layout_marginStart="-20dp"
+        android:layout_toEndOf="@id/avatar_Friend" />
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ChatFragment">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_above="@id/edt_message"
+     android:orientation="vertical">
+     <com.google.android.material.appbar.AppBarLayout
+         android:id="@+id/appChat"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true">
+     <androidx.appcompat.widget.Toolbar
+         android:id="@+id/toolbar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         >
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:id="@+id/circle_avatar_chat"/>
+         <TextView
+             android:id="@+id/name_user_chat"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/name"
+             android:layout_marginLeft="30dp"
+             android:textStyle="bold"
+
+             android:layout_marginStart="30dp" />
+
+     </androidx.appcompat.widget.Toolbar>
+     </com.google.android.material.appbar.AppBarLayout>
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/rcv_chat"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_above="@id/edt_message"
+         android:layout_below="@id/appChat"
+         />
+ </LinearLayout>
+
+    <EditText
+        android:id="@+id/edt_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:layout_toStartOf="@id/txt_send"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toLeftOf="@id/txt_send"
+        android:background="@drawable/eddit_sent"
+        android:hint="Message..."
+        />
+
+    <ImageButton
+        android:id="@+id/txt_send"
+        android:drawableStart="@drawable/ic_baseline_send_24"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentRight="true"
+        android:drawableTint="#284E78"
+        android:drawableLeft="@drawable/ic_baseline_send_24" />
+
+</RelativeLayout>
